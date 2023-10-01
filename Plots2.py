@@ -14,7 +14,7 @@ st.altair_chart(Chart)
 
 st.header('2. Interactive chart')
 st.subheader('2.1 Line Chart')
-df = pd.read_csv(r"C:\Users\rbgir\OneDrive\Desktop\streamlit\Car_sales.csv")
+df = pd.read_csv("Car_sales.csv")
 car_list = df.columns.tolist()
 car_choices = st.multiselect('Choose your car',car_list) 
 new_df = df[car_choices]
@@ -25,7 +25,7 @@ st.area_chart(new_df)
 
 st.header('3. DataVisualisation with Plotly')
 st.subheader('3.1 Display the Dataset')
-df = pd.read_csv(r"C:\Users\rbgir\Downloads\banknotes.csv")
+df = pd.read_csv("banknotes.csv")
 st.dataframe(df.head())
 
 st.subheader('3.2 Pie chart')
